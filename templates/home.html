@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-4 text-center" style="background-image:url('https://images.unsplash.com/photo-1562006101-8cb4476db274?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');">
+    <div  class="col-md-5 p-lg-5 mx-auto my-5"> 
+      <h1  style="color:#ffffff" class="display-4 fw-normal">Soluciones en domótica e ingeniería</h1>
+      <p style="color: #FFF" class="lead fw-normal">Instalaciones integrales en automatización para la mejora de inmuebles y servicios ingenieriles</p>
+      <a style="color: #FFF" class="btn btn-outline-secondary" href="/Sobre_nosotros">¿Quienes somos?</a>
+    </div>
+  </div>
+<div class="d-flex justify-content-center">
+    <div style="color: #ffffff" class="jumbotron">
+        <h3 class="display-4">Nuestros servicios </h3>
+    </div>
+</div>
+<!--<div class="d-flex justify-content-center">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B1</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B2</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B3</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B4</button>
+        <button style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B5</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B6</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B7</button>
+        <button style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        "  type="button" class="btn btn-primary">B8</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B9</button>
+    </div>
+</div>-->
+
+<br><br>
+
+<div class="d-flex justify-content-center">
+    <div class="buttons">
+    <link rel="stylesheet" media="all" href="{{url_for('static', filename='css/main.css')}}" />
+    <a href="/Home_cctv">
+        <button class="offset">Seguridad</button>
+    </a>
+    <a href="/Home_oficina">
+    <button class="offset">Oficina</button>
+    </a>
+    <a href="/Home_cocina">
+    <button class="offset">Cocina</button>
+    </a>
+    <a href="/Home_recamaras">
+    <button class="offset">Recamaras</button>
+    </a>
+    <a href="/Home_jardín">
+    <button class="offset">Jardín</button>
+    </a>
+    <a href="/Home_salas">
+    <button class="offset">Sala</button>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

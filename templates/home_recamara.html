@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-4 text-center bg-dark"style="background-image:url('https://images.unsplash.com/photo-1583221742001-9ad88bf233ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80');">
+    <div class="col-md-5 p-lg-5 mx-auto my-5"> 
+      <h1  style="color: #FFF" class="display-4 fw-normal">Recamara</h1>
+      <p style="color: #FFF" class="lead fw-normal">Crea un espacio de confort y recreación en tu lugar favorito</p>
+    </div>
+  </div>
+<!--<div class="d-flex justify-content-center">
+    <div style="color: #ffffff" class="jumbotron">
+        <h3 class="display-4">Soluciones en domótica e ingeniería </h3>
+    </div>
+</div>
+<!--<div class="d-flex justify-content-center">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B1</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B2</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B3</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B4</button>
+        <button style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B5</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B6</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B7</button>
+        <button style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        "  type="button" class="btn btn-primary">B8</button>
+        <button  style="background-color: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        " type="button" class="btn btn-primary">B9</button>
+    </div>
+</div>-->
+<div class="d-flex justify-content-center">
+    <div class="buttons">
+    <link rel="stylesheet" media="all" href="{{url_for('static', filename='css/main2.css')}}" />
+    <a href="/Home_cctv">
+        <button class="offset">Seguridad</button>
+    </a>
+    <a href="/Home_oficina">
+    <button class="offset">Oficina</button>
+    </a>
+    <a href="/Home_cocina">
+    <button class="offset">Cocina</button>
+    </a>
+    <a href="/Home_recamaras">
+    <button class="offset">Recamaras</button>
+    </a>
+    <a href="/Home_jardín">
+    <button class="offset">Jardín</button>
+    </a>
+    <a href="/Home_salas">
+    <button class="offset">Sala</button>
+    </a>
+  </div>
+</div>
+
+<br><br>
+</div>
+<div class="container p-2">
+<div class="d-flex justify-content-around">
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#000000" class="card-body" >
+            <h5 class="card-title" style="color:#FFF">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#FFF">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#FFF" class="card-body" >
+            <h5 class="card-title" style="color:#000000">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#000000">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#000000" class="card-body" >
+            <h5 class="card-title" style="color:#FFF">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#FFF">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#FFF" class="card-body" >
+            <h5 class="card-title" style="color:#000000">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#000000">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+</div>
+<br>
+<div class="d-flex justify-content-around">
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#000000" class="card-body" >
+            <h5 class="card-title" style="color:#FFF">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#FFF">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#FFF" class="card-body" >
+            <h5 class="card-title" style="color:#000000">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#000000">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#000000" class="card-body" >
+            <h5 class="card-title" style="color:#FFF">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#FFF">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://images.pexels.com/photos/7364948/pexels-photo-7364948.jpeg?cs=srgb&dl=pexels-%C5%82ukasz-klimkiewicz-7364948.jpg&fm=jpg" class="img-responsive card-img-top" alt="...">
+        <div style="background:#FFF" class="card-body" >
+            <h5 class="card-title" style="color:#000000">Sistemas CCTV</h5>
+            <p class="card-text" style="color:#000000">Instalación de monitoreo CCTV para casas</p>
+            <a href="/Instalacioncctv" class="btn btn-primary">ver mas</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+{% endblock %}
