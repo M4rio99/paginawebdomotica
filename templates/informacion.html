@@ -1,11 +1,365 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div style="color: #fff" class="d-flex justify-content-center">
-    <div class="jumbotron">
-        <h3 class="display-4">Sobre nosotros </h3>
-    </div>
-
 <br> <br><br> <br><br> <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-with, initial-scale=1.0">
+	<title> Quienes somos</title>
+	<style>
+		:root {
+			--blanco: #ffffff;
+			--primario: #fff000;
+		}
+		html{
+			font-size: 62.5%;
+            scroll-snap-type: y mandatory;
+            
+
+		}
+		body{
+			font-size: 16px;
+            color: white;
+		}
+		.titulo{
+			text-align: center;
+			font-size: 1rem;
+            margin-bottom: 5rem;
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+		.titulo span{
+			font-size: 5rem;
+		}
+		.subtitulos{
+			text-align: left;
+			font-size: 2.8rem;
+		}
+		.primeraimg{
+			background-image: url(/static/Fotos/problem.jpeg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 450px;
+			width: 100%;
+			position: relative;
+			padding: 2rem 2rem;
+			margin-top: 2rem;
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+		.segundaimg{
+			background-image: url(/static/Fotos/numero2.jpeg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 450px;
+			position: relative;
+			padding: 10;
+			border-radius: 5rem;
+			padding: 3rem 3rem;
+			margin-top: 3rem;
+			margin-left: 3rem;
+			margin-right: 3rem;
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+		.primeraimg h2{
+   		 	font-size: 8rem;
+			padding-right: 50%;
+		}
+		.primeraimg p{
+   		 	position: inherit;
+			padding-right: 100rem;
+		}
+		.vacio {
+   		 	position: inherit;
+			padding: 3rem 3rem;
+			margin-top: 3rem;
+			margin-left: 3rem;
+			margin-right: 3rem;
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+		.Secciones{
+			text-align: center;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+		.Empleados{
+			display: grid;
+			grid-template-columns: 25% 25% 25% 25%;
+			align-items: center;
+			position: initial;
+		}
+		.Empleados .Servicio .Fotos{
+			position: relative;
+			padding: 3rem 3rem;
+			align-items: stretch;	
+		}
+		.Servicio{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.Servicio h3{
+			line-height: 0.2;
+			text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+		}
+		.Servicio .Fotos{
+			height: 15rem;
+			width: 15rem;
+			background-color: var(--primario);
+			border-radius: 50%;
+			display: contents;
+			justify-content: center;
+			align-items: center;
+		}	
+		.Secciones img, .Secciones h2{
+			align-items: center;
+			font-size: 4.8rem;
+		}
+		.segundaimg h2, .segundaimg p{
+			color:var(--blanco);
+	
+		}
+		.Contact{
+			text-align: center;
+			font-size: 3rem;
+            margin-top: 4rem;
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+		.segundaimg .btn-abrir-popup{
+			position: absolute;
+			padding: 1rem 3rem;
+			margin-top: 1rem;
+			font-size: 2rem;
+			text-decoration: none;
+			font-weight: bold;
+			border-radius: .5rem;
+			bottom: 5%;
+			right: 2%;
+		}
+		.segundaimg .btn-abrir-popup:hover {
+			background: rgba(48, 51, 59, 0.9);
+		}
+		.sombra{
+			box-shadow: 0px 8px 9px 0px rgba(0,0,0,0.75);
+			-webkit-box-shadow: 0px 8px 9px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 8px 9px 0px rgba(0,0,0,0.75);
+		}
+		.derechos{
+			font-size: 2rem;
+		}
+		.overlay{
+            background: rgba(0,0,0,0.7);
+			position: fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			visibility: hidden;
+		}
+		.overlay.active{
+			visibility: visible;
+		}
+		.popup{
+			background: #f8f8f8;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+			border-radius: 3px;
+			padding: 20px;
+			text-align: center;
+			width: 600px;
+		}
+		.popup .btn-cerrar-popup{
+			font-size:16px;
+			line-height: 16px;
+			display: block;
+			text-align: right;
+			color: #474040;
+			transition: .3s ease all;
+		}
+		.popup .btn-cerrar-popup:hover{
+			color: rgb(80, 75, 75);
+		}
+		.popup h3{
+			font-size:36px;
+			font-weight: 600px;
+			margin-bottom: 10px;
+			text-align: justify;
+            color: black;
+		}
+        .sobre{
+            scroll-snap-align: center;
+            scroll-snap-stop: always ;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="titulo">
+			<span> Quienes Somos </span>
+		</div>
+	</header>
+	<main>
+		<section class="primeraimg">
+			<h2> Nuestra misiòn y nuestros valores </h2>
+			<p>  Aenean pulvinar pretium urna, in sollicitudin eros aliquet aliquet. Nullam non neque sapien. Aliquam mattis enim est, non tristique lorem malesuada id. Donec orci ipsum, vehicula sit amet laoreet nec, gravida eu nibh. Donec at aliquet ipsum, sed gravida ante. Aenean aliquam neque ut consectetur mattis. Donec tincidunt risus nec arcu congue, vel vestibulum purus posuere. Ut ut eleifend felis. Nullam et massa sed neque bibendum porttitor.</p>
+		</section>
+		<section class="vacio">
+			<p> Sed tempor tellus non lorem volutpat commodo. Aliquam a erat condimentum, volutpat est vel, tincidunt tortor. Quisque sit amet mattis arcu, a feugiat ex. Sed tempor dui quis malesuada auctor. Cras mollis dapibus ipsum sit amet sagittis. Aenean pulvinar pretium urna, in sollicitudin eros aliquet aliquet. Nullam non neque sapien. Aliquam mattis enim est, non tristique lorem malesuada id. Donec orci ipsum, vehicula sit amet laoreet nec, gravida eu nibh. Donec at aliquet ipsum, sed gravida ante. Aenean aliquam neque ut consectetur mattis. Donec tincidunt risus nec arcu congue, vel vestibulum purus posuere. Ut ut eleifend felis. Nullam et massa sed neque bibendum porttitor. </p>
+		</section>
+		<section>
+			<div class="segundaimg sombra">
+				<h2> Mision y enfoque </h2>
+				<p> Sed tempor tellus non lorem volutpat commodo. Aliquam a erat condimentum, volutpat est vel, tincidunt tortor. Quisque sit amet mattis arcu, a feugiat ex. Sed tempor dui quis malesuada auctor. Cras mollis dapibus ipsum sit amet sagittis. Aenean pulvinar pretium urna, in sollicitudin eros aliquet aliquet. </p>	
+				<div class="btn-abrir-popup" id="btn-abrir-popup">
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<circle cx="12" cy="12" r="9" />
+						<line x1="9" y1="12" x2="15" y2="12" />
+						<line x1="12" y1="9" x2="12" y2="15" />
+					  </svg>
+				</div>
+				<div class="overlay" id="overlay">
+					<div class="popup" id="popup">
+						<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  							<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  							<rect x="4" y="4" width="16" height="16" rx="2" />
+  							<path d="M10 10l4 4m0 -4l-4 4" />
+							</svg>
+						</a>
+						<h3> Sed tempor tellus non lorem volutpat commodo. Aliquam a erat condimentum, volutpat est vel, tincidunt tortor. Quisque sit amet mattis arcu, a feugiat ex. Sed tempor dui quis malesuada auctor. </h3>
+						<h3> Sed tempor tellus non lorem volutpat commodo. Aliquam a erat condimentum, volutpat est vel, tincidunt tortor. Quisque sit amet mattis arcu, a feugiat ex. Sed tempor dui quis malesuada auctor. </h3>
+					</div>
+				</div>
+			</div>
+			<script src="/static/popup.js"></script>
+		</section>
+        <section>
+			<div class="Secciones">
+				<h2> Conoce a nuestros directores ejecutivos </h2>
+				<div class="Empleados">
+					<section class="Servicio">
+						<div class="Fotos">
+							<img src="/static/Fotos/1.jpeg">
+						</div>
+						<h2> Mario </h2>
+						<h3> -Ingeniero Mecatrónico.</h3>
+						<h3> -Dios del trueno.</h3>
+						<h3> -Creador de Samsung.</h3>
+                        <h3> -22 años de Edad.</h3>
+						<h3> -Maestro en Ciberseguridad.</h3>
+						<h3> -Doctor en Neurocirujía.</h3>
+					</section>
+					<section class="Servicio">
+						<div class="Fotos">
+							<img src="/static/Fotos/1.jpeg">
+						</div>
+						<h2> Nestor </h2>
+						<h3> -Ingeniero Mecatrónico.</h3>
+						<h3> -Dios del trueno.</h3>
+						<h3> -Creador de Samsung.</h3>
+						<h3> -22 años de Edad.</h3>
+						<h3> -Maestro en Ciberseguridad.</h3>
+						<h3> -Doctor en Neurocirujía.</h3>
+					</section>
+					<section class="Servicio">
+						<div class="Fotos">
+							<img src="/static/Fotos/2.jpeg">
+						</div>
+						<h2> Colunga </h2>
+						<h3> -Ingeniero Mecatrónico.</h3>
+						<h3> -Dios del trueno.</h3>
+						<h3> -Creador de Samsung.</h3>
+						<h3> -22 años de Edad.</h3>
+						<h3> -Maestro en Ciberseguridad.</h3>
+						<h3> -Doctor en Neurocirujía.</h3>
+					</section>
+					<section class="Servicio">
+						<div class="Fotos">	
+							<img src="/static/Fotos/3.jpeg">
+						</div>
+						<h2> Aaron </h2>
+						<h3> -Ingeniero Mecatrónico.</h3>
+						<h3> -Dios del trueno.</h3>
+						<h3> -Creador de Samsung.</h3>
+						<h3> -22 años de Edad.</h3>
+						<h3> -Maestro en Ciberseguridad.</h3>
+						<h3> -Doctor en Neurocirujía.</h3>
+					</section>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="Contact">
+				<h2> Contacto </h2>
+				<p> mario.cisneros.noriega@gmail.com</p>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="Contact derechos">
+			<p> Todos los derechos reservados </p>
+		</div>
+	</footer>
+</body>
+</html>
 </div>
+<br><br><br><br><br><br><br><br>
+
+
+      <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        
+        <div class="row1 sobre">
+          <div style="color:#FFF" class="col-lg-41">
+            
+            <img src="https://cdn.discordapp.com/attachments/779588782008958976/923399033144352788/6.png" alt="Generic placeholder image" width="150" height="90">
+            <h2>Instagram</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          
+          <div style="color:#FFF"  class="col-lg-41">
+            <img src="https://cdn.discordapp.com/attachments/779588782008958976/923399032460685322/4.png" alt="Generic placeholder image" width="150" height="90">
+            <h2>LinkedIn</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div style="color:#FFF" class="col-lg-41">
+            <img  src="https://cdn.discordapp.com/attachments/779588782008958976/923399032833986600/5.png" alt="Generic placeholder image" width="150" height="90">
+            <h2>Facebook</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div style="color:#FFF" class="col-lg-41">
+            <img src="https://cdn.discordapp.com/attachments/779588782008958976/923399032112545832/3.png" alt="Generic placeholder image" width="150" height="90">
+            <h2>WhatsApp</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          
+        </div><!-- /.row -->
+
+
+
+        <!-- START THE FEATURETTES -->
+
+
+      </div><!-- /.container -->
+  </body>
+</html>
+<br><br><br><br><br><br>
 {% endblock %}

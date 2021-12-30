@@ -15,6 +15,7 @@ body{
 .container
 {
   max-width: 1800px;
+  max-height: 80000px;
 }
 .row1 {
  display:grid;
